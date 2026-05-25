@@ -1,0 +1,280 @@
+aid: restate-dev
+name: Restate
+segments:
+  - ProCode_API_Composition
+  - Workflows
+description: >-
+  Restate is a durable execution platform for building resilient distributed
+  applications, microservice orchestration, durable workflows, stateful
+  services, and AI agents. Founded by Apache Flink and Apache Kafka veterans
+  (Stephan Ewen, Igal Shilman, Till Rohrmann), Restate ships a single-binary
+  Rust runtime that journals every step of handler execution so code survives
+  crashes, restarts, and infrastructure failures. The platform exposes an
+  Ingress API on port 8080 for HTTP invocation of services, virtual objects,
+  and workflows (with idempotency keys, async /send semantics, and delayed
+  invocations) and an Admin API on port 9070 for deployment registration,
+  service introspection, invocation control (cancel, kill, pause, resume,
+  restart, purge), subscriptions, and cluster health. Official SDKs target
+  TypeScript, Java/Kotlin, Python, Go, Rust, and Ruby, with first-class
+  integrations for AWS Lambda, Cloudflare Workers, Deno Deploy, Vercel, and
+  Kubernetes (via the restate-operator). Restate Cloud is the managed
+  offering with SOC 2 Type I compliance, enterprise SSO (Okta, Google
+  Workspace, Azure AD), HIPAA BAAs, and an in-preview client-side journal
+  encryption feature.
+type: Index
+position: Consumer
+access: 3rd-Party
+image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+tags:
+  - AI Agents
+  - Durable Execution
+  - Durable Workflows
+  - Event-Driven
+  - Kafka
+  - Microservice Orchestration
+  - Orchestration
+  - ProCode_API_Composition
+  - Resilience
+  - Sagas
+  - Self-Hosting
+  - Service Protocol
+  - State Machines
+  - Stateful Services
+  - Step Functions
+  - Virtual Objects
+  - Workflows
+  - XState
+created: '2026-05-25'
+modified: '2026-05-25'
+url: https://raw.githubusercontent.com/api-evangelist/restate-dev/refs/heads/main/apis.yml
+specificationVersion: '0.19'
+apis:
+  - aid: restate-dev:admin-api
+    name: Restate Admin API
+    description: >-
+      The Restate Admin API is the HTTP control plane for a running Restate
+      Server, exposed by default on port 9070. It manages service deployment
+      registration, lists and introspects services and handlers, controls
+      invocations (cancel, kill, pause, resume, restart, purge), manages
+      Kafka and event subscriptions, queries system state via embedded SQL,
+      and reports cluster health and version. The Admin API is the surface
+      the Restate CLI and Web UI drive, and an OpenAPI document for the
+      running server is available at the /openapi endpoint.
+    humanURL: https://docs.restate.dev/operate/clients
+    tags:
+      - Admin
+      - Control Plane
+      - Deployments
+      - Invocations
+      - Subscriptions
+    properties:
+      - type: Documentation
+        url: https://docs.restate.dev/operate/clients
+      - type: APIReference
+        url: https://docs.restate.dev/references/admin-api
+      - type: GitHubRepository
+        url: https://github.com/restatedev/restate
+  - aid: restate-dev:ingress-api
+    name: Restate Ingress API
+    description: >-
+      The Restate Ingress API is the HTTP data-plane for invoking services,
+      virtual objects, and workflows running on Restate Server, exposed by
+      default on port 8080. Requests follow the path conventions
+      /{ServiceName}/{handler}, /{VirtualObject}/{key}/{handler}, and
+      /{Workflow}/{workflowId}/run, with JSON bodies. Append /send for
+      fire-and-forget invocations that return an invocation ID, pass a
+      ?delay= parameter for delayed/scheduled invocations, and use the
+      Idempotency-Key header for at-most-once semantics (responses are
+      cached for 24 hours). The Ingress also brokers Kafka-event-driven
+      handler invocations and exposes per-service OpenAPI documents at
+      :9070/services/{ServiceName}/openapi.
+    humanURL: https://docs.restate.dev/invoke/http
+    tags:
+      - Data Plane
+      - HTTP
+      - Idempotency
+      - Ingress
+      - Invocation
+      - Virtual Objects
+      - Workflows
+    properties:
+      - type: Documentation
+        url: https://docs.restate.dev/invoke/http
+      - type: GitHubRepository
+        url: https://github.com/restatedev/restate
+  - aid: restate-dev:service-protocol
+    name: Restate Service Protocol
+    description: >-
+      The Restate Service Protocol is the wire protocol Restate Server uses
+      to communicate with handler endpoints implemented in any official SDK.
+      It journals every side-effect (durable steps, RPCs, state reads/writes,
+      sleeps, awakeables) so handlers can be replayed deterministically and
+      resume from the exact step they were on when an infrastructure failure
+      occurred. Implementations of this protocol are what make a language an
+      official Restate SDK; the shared core lives in sdk-shared-core and the
+      protocol definitions in the Restate Server source tree.
+    humanURL: https://docs.restate.dev/develop/sdks
+    tags:
+      - Durability
+      - Journal
+      - Protocol
+      - SDK
+    properties:
+      - type: Documentation
+        url: https://docs.restate.dev/develop/sdks
+      - type: GitHubRepository
+        url: https://github.com/restatedev/sdk-shared-core
+common:
+  - type: Portal
+    url: https://restate.dev
+  - type: Documentation
+    url: https://docs.restate.dev
+  - type: GettingStarted
+    url: https://docs.restate.dev/get_started/quickstart
+  - type: Quickstart
+    url: https://docs.restate.dev/get_started/quickstart
+  - type: Tutorial
+    url: https://docs.restate.dev/get_started/tour
+  - type: SDK
+    url: https://docs.restate.dev/develop/sdks
+  - type: CLI
+    url: https://docs.restate.dev/operate/clients
+  - type: Pricing
+    url: https://restate.dev/pricing
+  - type: Cloud
+    url: https://restate.dev/cloud
+  - type: Blog
+    url: https://restate.dev/blog
+  - type: UseCases
+    url: https://restate.dev/use-cases
+  - type: Careers
+    url: https://restate.dev/careers
+  - type: Team
+    url: https://restate.dev/team
+  - type: Contact
+    url: https://restate.dev/contact
+  - type: TermsOfService
+    url: https://restate.dev/terms-and-conditions
+  - type: PrivacyPolicy
+    url: https://restate.dev/privacy
+  - type: Imprint
+    url: https://restate.dev/imprint
+  - type: Login
+    url: https://cloud.restate.dev
+  - type: SignUp
+    url: https://cloud.restate.dev
+  - type: GitHubOrganization
+    url: https://github.com/restatedev
+  - type: LLMsTxt
+    url: https://docs.restate.dev/llms.txt
+  - type: AgentSkill
+    url: https://github.com/restatedev/skills
+  - type: Features
+    data:
+      - name: Durable Execution
+        description: Restate journals every handler step so code survives crashes, restarts, and infrastructure failures and resumes exactly where it left off.
+      - name: Virtual Objects
+        description: Stateful, single-writer addressable entities with built-in key-value state and exclusive concurrency for safe stateful services.
+      - name: Workflows
+        description: Long-running, durable workflow handlers with deterministic replay, sleeps that can span months, and external signal awakeables.
+      - name: Sagas and Compensations
+        description: First-class patterns for compensating side-effects across distributed transactions with guaranteed cleanup paths.
+      - name: Durable Promises and Awakeables
+        description: External-event integration where workflows pause for human input, webhooks, or asynchronous callbacks without losing state.
+      - name: Kafka Event Subscriptions
+        description: Subscribe Restate handlers to Kafka topics so events are turned into durable, exactly-once handler invocations.
+      - name: Idempotent HTTP Invocations
+        description: Idempotency-Key header makes any Ingress invocation safe to retry, with responses cached for 24 hours.
+      - name: Delayed and Scheduled Invocations
+        description: Schedule invocations into the future with ?delay= or use Restate as a cron substitute for durable timers.
+      - name: Embedded SQL Introspection
+        description: Query journal, invocation, service, and state metadata over an embedded Apache DataFusion SQL engine for live introspection.
+      - name: Single-Binary Distributed Server
+        description: A single Rust binary that runs single-node for development and scales to a multi-node cluster with embedded RocksDB and Raft.
+      - name: Restate Cloud
+        description: Managed Restate clusters with SOC 2 Type I, enterprise SSO (Okta, Google Workspace, Azure AD), HIPAA BAAs, and tunneling.
+      - name: Client-Side Journal Encryption
+        description: Developer-preview feature that encrypts journal entries with customer-owned keys before they reach Restate Cloud.
+      - name: Web UI and CLI
+        description: First-party Web UI and restate CLI for inspecting invocations, registering deployments, and managing services.
+  - type: UseCases
+    data:
+      - name: Microservice Orchestration
+        description: Coordinate multi-service business transactions with automatic retries, compensation, and timeout handling using durable handlers.
+      - name: Durable AI Agents
+        description: Build agents that survive process crashes and replay tool calls deterministically, with integrations for OpenAI, LangChain, Pydantic AI, Vercel AI, Google ADK, and LiteLLM.
+      - name: Step Functions and Workflow Engines
+        description: Replace AWS Step Functions / Azure Durable Functions / hand-rolled state machines with code-first workflows in your language of choice.
+      - name: Background Jobs and Async Tasks
+        description: Run reliable background jobs with retries, idempotency, and scheduling without a separate queue and worker infrastructure.
+      - name: Saga-Based Distributed Transactions
+        description: Implement compensating-action sagas for cross-service operations like order fulfillment, payments, and inventory reservation.
+      - name: Stateful Serverless APIs
+        description: Combine virtual-object state with FaaS deployment on AWS Lambda, Cloudflare Workers, Deno Deploy, or Vercel for stateful serverless apps.
+      - name: Event-Driven Workflows
+        description: Subscribe handlers to Kafka topics so each event triggers a durable, exactly-once workflow invocation.
+      - name: Human-in-the-Loop Approvals
+        description: Pause workflows on awakeables that wait for webhook callbacks, signed URLs, or human approvals for arbitrary durations.
+  - type: Integrations
+    data:
+      - name: TypeScript SDK
+        description: Official Restate SDK for Node.js and TypeScript - the most-used SDK and the basis for many examples.
+      - name: Java/Kotlin SDK
+        description: Official Restate SDK for the JVM, with Spring Boot, Maven, and Gradle templates.
+      - name: Python SDK
+        description: Official Restate SDK for Python, with AWS Lambda and standalone templates.
+      - name: Go SDK
+        description: Official Restate SDK for Go with the standard handler/object/workflow programming model.
+      - name: Rust SDK
+        description: Official Restate SDK for Rust, sharing the same shared-core protocol implementation as the server.
+      - name: Ruby SDK
+        description: Official Restate SDK for Ruby (newer addition to the SDK family).
+      - name: Restate Operator for Kubernetes
+        description: Official Kubernetes operator (restate-operator) for deploying Restate clusters on EKS, GKE, AKS, and bare-metal Kubernetes.
+      - name: AWS Lambda
+        description: Deploy Restate handlers as AWS Lambda functions via the restatedev/cdk constructs and lambda templates.
+      - name: Cloudflare Workers
+        description: Deploy Restate handlers to Cloudflare Workers via the cloudflare-workers-template.
+      - name: Deno Deploy
+        description: Deploy Restate handlers to Deno Deploy via the deno-template.
+      - name: Vercel
+        description: Deploy Restate handlers to Vercel via the vercel-template and vercel-workflow projects.
+      - name: Kafka
+        description: Subscribe handlers to Kafka topics for event-driven, exactly-once invocation.
+      - name: XState
+        description: Run XState state machines as durable Restate workflows via restatedev/xstate.
+      - name: OpenAI Agents SDK
+        description: Make OpenAI Agents SDK loops crash-tolerant with Restate as the durable runtime.
+      - name: LangChain
+        description: Integrate Restate as the durable orchestrator behind LangChain agent workflows.
+      - name: Pydantic AI
+        description: Drive Pydantic AI agent workflows with Restate for fault tolerance and step replay.
+      - name: Google ADK
+        description: Build resilient agents with the Google Agent Development Kit (ADK) and Restate.
+      - name: Vercel AI SDK
+        description: Use Restate as the durable runtime for Vercel AI SDK agents and chat applications.
+      - name: LiteLLM
+        description: Integrate LiteLLM with Restate for durable LLM routing and retry across providers.
+      - name: Langfuse
+        description: Trace Restate handler executions and LLM calls in Langfuse for observability.
+      - name: OpenTelemetry
+        description: Emit traces, metrics, and logs from Restate Server and SDKs via OpenTelemetry.
+      - name: PostgreSQL and Databases
+        description: Use Restate to coordinate database transactions across services with durable execution guarantees.
+      - name: Apache DataFusion
+        description: Embedded Apache DataFusion SQL engine powers introspection queries against journals and state.
+      - name: Knative
+        description: Build stateful serverless applications by combining Knative and Restate.
+  - type: Solutions
+    data:
+      - name: Restate Server (Open Source)
+        description: BSL-licensed single-binary Rust server, free for self-hosted use and the canonical runtime for the Restate Service Protocol.
+      - name: Restate Cloud
+        description: Fully-managed Restate clusters with SOC 2, enterprise SSO, HIPAA BAA support, and Cloud Tunnel client for hybrid deployments.
+      - name: Restate On-Prem / BYOC
+        description: Bring-your-own-cloud option for running Restate in customer-controlled AWS, GCP, or Azure accounts with Restate-managed operations.
+      - name: Restate for AI Agents
+        description: Targeted positioning for durable agent orchestration with integrations across major LLM and agent frameworks.
+maintainers:
+  - FN: Kin Lane
+    email: kin@apievangelist.com
