@@ -3,19 +3,12 @@
   "feeds": [
     {
       "source": "https://restate.dev/blog",
-      "feed_url": "https://restate.dev/blog",
-      "title": "",
-      "saved": 0,
-      "method": "none"
-    },
-    {
-      "source": "https://restate.dev/cloud",
-      "feed_url": "https://restate.dev/cloud",
-      "title": "",
-      "saved": 0,
-      "method": "none"
+      "feed_url": "",
+      "saved": 1,
+      "method": "agent-scrape"
     }
   ],
-  "post_count": 0,
-  "fetched": "2026-06-14T20:42:17Z"
+  "post_count": 2,
+  "fetched": "2026-06-27T13:06:42Z",
+  "agent_pulled": "2026-06-27"
 }

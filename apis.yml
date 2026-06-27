@@ -131,11 +131,11 @@ common:
     url: https://docs.restate.dev
   - type: GettingStarted
     url: https://docs.restate.dev/get_started/quickstart
-  - type: Quickstart
+  - type: GettingStarted
     url: https://docs.restate.dev/get_started/quickstart
   - type: Tutorial
     url: https://docs.restate.dev/get_started/tour
-  - type: SDK
+  - type: SDKs
     url: https://docs.restate.dev/develop/sdks
   - type: CLI
     url: https://docs.restate.dev/operate/clients
@@ -161,13 +161,13 @@ common:
     url: https://restate.dev/imprint
   - type: Login
     url: https://cloud.restate.dev
-  - type: SignUp
+  - type: Signup
     url: https://cloud.restate.dev
   - type: GitHubOrganization
     url: https://github.com/restatedev
-  - type: LLMsTxt
+  - type: LlmsText
     url: https://docs.restate.dev/llms.txt
-  - type: AgentSkill
+  - type: AgentSkills
     url: https://github.com/restatedev/skills
   - type: Features
     data:
