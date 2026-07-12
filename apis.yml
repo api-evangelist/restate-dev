@@ -125,6 +125,10 @@ apis:
       - type: GitHubRepository
         url: https://github.com/restatedev/sdk-shared-core
 common:
+  - type: TrustCenter
+    url: security/restate-dev-trust-center.yml
+  - type: DomainSecurity
+    url: security/restate-dev-domain-security.yml
   - type: Portal
     url: https://restate.dev
   - type: Documentation

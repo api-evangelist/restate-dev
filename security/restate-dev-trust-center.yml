@@ -1,0 +1,12 @@
+generated: '2026-07-11'
+method: searched
+probe: true
+source: https://trust.restate.dev/
+url: https://trust.restate.dev/
+certifications:
+- SOC 2
+evidence:
+- source: https://trust.restate.dev/
+  keywords:
+  - soc 2
+  - trust center
