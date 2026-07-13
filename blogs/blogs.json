@@ -2,13 +2,14 @@
   "repo": "restate-dev",
   "feeds": [
     {
-      "source": "https://restate.dev/blog",
-      "feed_url": "",
-      "saved": 1,
-      "method": "agent-scrape"
+      "source": "https://restate.dev/cloud",
+      "feed_url": "https://restate.dev/cloud",
+      "title": "",
+      "saved": 0,
+      "method": "none"
     }
   ],
   "post_count": 2,
-  "fetched": "2026-06-27T13:06:42Z",
-  "agent_pulled": "2026-06-27"
+  "fetched": "2026-07-11T11:50:51Z",
+  "agent_pulled": "2026-07-04"
 }
