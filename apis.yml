@@ -44,6 +44,25 @@ tags:
   - Kafka
   - Microservice Orchestration
   - Orchestration
+  - Pro-Code-API-Composition
+  - Resilience
+  - Sagas
+  - Self-Hosting
+  - Service Protocol
+  - State Machines
+  - Stateful Services
+  - Step Functions
+  - Virtual Objects
+  - Workflows
+  - XState
+tags_raw:
+  - AI Agents
+  - Durable Execution
+  - Durable Workflows
+  - Event-Driven
+  - Kafka
+  - Microservice Orchestration
+  - Orchestration
   - ProCode_API_Composition
   - Resilience
   - Sagas
@@ -73,6 +92,12 @@ apis:
       running server is available at the /openapi endpoint.
     humanURL: https://docs.restate.dev/operate/clients
     tags:
+      - Admin
+      - Control Plane
+      - Deployment
+      - Invocations
+      - Subscription
+    tags_raw:
       - Admin
       - Control Plane
       - Deployments
@@ -126,6 +151,11 @@ apis:
       protocol definitions in the Restate Server source tree.
     humanURL: https://docs.restate.dev/develop/sdks
     tags:
+      - Durability
+      - journal
+      - Protocol
+      - SDK
+    tags_raw:
       - Durability
       - Journal
       - Protocol
