@@ -22,6 +22,18 @@ description: >-
   Workspace, Azure AD), HIPAA BAAs, and an in-preview client-side journal
   encryption feature.
 type: Index
+deliveryModel:
+  model: unknown
+  open_source: unknown
+  commercial: true
+  callable_host: false
+  label: Delivery model not determined — needs a product licence on record
+  confidence: low
+  source:
+  - pricing
+  - repository-unlicensed
+  generated: '2026-08-28'
+  method: derived
 accessModel:
   pricing: unknown
   onboarding: unknown
@@ -166,6 +178,10 @@ apis:
       - type: GitHubRepository
         url: https://github.com/restatedev/sdk-shared-core
 common:
+  - type: IssueTracker
+    url: https://github.com/restatedev/restate/issues
+  - type: Releases
+    url: https://github.com/restatedev/restate/releases
   - type: TrustCenter
     url: security/restate-dev-trust-center.yml
   - type: DomainSecurity
