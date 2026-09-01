@@ -56,7 +56,7 @@ tags:
   - Kafka
   - Microservice Orchestration
   - Orchestration
-  - ProCode_API_Composition
+  - Pro-Code-API-Composition
   - Resilience
   - Sagas
   - Self-Hosting
@@ -164,7 +164,7 @@ apis:
     humanURL: https://docs.restate.dev/develop/sdks
     tags:
       - Durability
-      - journal
+      - Journal
       - Protocol
       - SDK
     tags_raw:
