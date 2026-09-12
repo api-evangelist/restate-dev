@@ -178,6 +178,8 @@ apis:
       - type: GitHubRepository
         url: https://github.com/restatedev/sdk-shared-core
 common:
+  - type: Website
+    url: https://www.restate.dev/
   - type: IssueTracker
     url: https://github.com/restatedev/restate/issues
   - type: Releases
