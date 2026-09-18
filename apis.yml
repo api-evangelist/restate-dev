@@ -164,7 +164,7 @@ apis:
     humanURL: https://docs.restate.dev/develop/sdks
     tags:
       - Durability
-      - Journal
+      - Journals
       - Protocol
       - SDK
     tags_raw:
